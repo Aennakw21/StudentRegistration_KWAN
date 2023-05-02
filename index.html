@@ -85,10 +85,10 @@
             </select>
            
           </div>
-          <button type="button" class="btn btn-dark" id="Insbtn">INSERT</button>
-          <button type="button" class="btn btn-dark" id="Selbtn">SELECT</button>
-          <button type="button" class="btn btn-dark" id="Updbtn">UPDATE</button>
-          <button type="button" class="btn btn-dark" id="Delbtn">DELETE</button>
+          <button type="button" class="btn btn-success" id="Insbtn">INSERT</button>
+          <button type="button" class="btn btn-warning" id="Selbtn">SELECT</button>
+          <button type="button" class="btn btn-info" id="Updbtn">UPDATE</button>
+          <button type="button" class="btn btn-danger" id="Delbtn">DELETE</button>
         </div>
        
       </form>
@@ -137,7 +137,6 @@
         var delBtn = document.getElementById("Delbtn")
 
         //add data function
-
         function InsertData(){
             set(ref(db, "TheStudents/"+ rollbox.value),{
                 RollNo: rollbox.value,
@@ -159,8 +158,6 @@
         }
 
         // select data function
-
-
         function SelectData(){
           const dbref = ref(db);
      
@@ -188,8 +185,6 @@
 
 
       // update data function
-
-
       function UpdateData(){
             update(ref(db, "TheStudents/"+ rollbox.value),{
                 RollNo: rollbox.value,
@@ -212,8 +207,6 @@
 
 
         // delete function
-
-
         function DeleteData(){
           remove(ref(db, "TheStudents/"+ rollbox.value))
           .then(()=>{
